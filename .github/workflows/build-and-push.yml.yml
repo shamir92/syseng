@@ -23,7 +23,6 @@ jobs:
           file: nginx.dockerfile
           push: true
           tags: |
-            shamirhusein/syseng:latest
             shamirhusein/syseng:${{ github.sha }}
 
       - name: Log in to Docker Hub
