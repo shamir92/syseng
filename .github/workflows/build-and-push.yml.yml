@@ -16,6 +16,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+     - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
@@ -25,11 +31,7 @@ jobs:
           tags: |
             shamirhusein/syseng:${{ github.sha }}
 
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+ 
 
       - name: Push to Docker Hub
         run: docker push shamirhusein/syseng:${{ github.sha }}
