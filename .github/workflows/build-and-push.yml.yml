@@ -23,8 +23,8 @@ jobs:
           file: nginx.dockerfile
           push: true
           tags: |
-            organization/nginx:latest
-            organization/nginx:${{ github.sha }}
+            shamirhusein/syseng:latest
+            shamirhusein/syseng:${{ github.sha }}
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v1
@@ -33,4 +33,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push to Docker Hub
-        run: docker push organization/nginx:latest
+        run: docker push shamirhusein/syseng:${{ github.sha }}
