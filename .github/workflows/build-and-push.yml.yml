@@ -20,7 +20,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ../../nginx.dockerfile
+          file: nginx.dockerfile
           push: true
           tags: |
             organization/nginx:latest
