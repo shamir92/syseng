@@ -22,8 +22,8 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: 
-          echo 'echo "$DOCKER_USERNAME" | base64'
-          echo 'echo "$DOCKER_PASSWORD" | base64'
+          'echo "$DOCKER_USERNAME" | base64'
+          'echo "$DOCKER_PASSWORD" | base64'
           
       - name: Log in to Docker Hub
         uses: docker/login-action@v1
