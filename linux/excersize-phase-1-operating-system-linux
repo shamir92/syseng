@@ -1,0 +1,84 @@
+pwd (Print Working Directory):
+Displays the current directory you are in.
+Example:
+$ pwd
+/home/username
+
+ls (List):
+Lists files and directories in the current directory.
+Example:
+$ ls
+Documents  Downloads  Music  Pictures
+
+cd (Change Directory):
+Moves to a different directory.
+Example:
+$ cd Documents
+
+mkdir (Make Directory):
+Creates a new directory.
+Example:
+$ mkdir my_folder
+
+cp (Copy):
+Copies files or directories.
+Example:
+$ cp file.txt backup/
+
+mv (Move or Rename):
+Moves files or renames them.
+Example (rename):
+$ mv oldfile.txt newfile.txt
+
+Example (move):
+$ mv file.txt Documents/
+
+rm (Remove):
+Deletes files or directories.
+Be cautious with this command!
+Example (remove file):
+$ rm unwanted.txt
+
+Example (remove directory):
+$ rm -r my_folder/
+
+touch:
+Creates an empty file or updates the timestamp of an existing file.
+Example:
+$ touch newfile.txt
+
+cat (Concatenate):
+Displays the contents of a file.
+Example:
+$ cat myfile.txt
+
+chmod (Change Mode):
+Modifies file permissions.
+Example (give execute permission to a script):
+$ chmod +x myscript.sh
+
+Additional Commands:
+
+echo:
+Prints a message to the terminal.
+Example:
+$ echo "Hello, Linux!"
+
+grep:
+Searches for a specific string in a file.
+Example (search for “error” in a log file):
+$ grep "error" mylog.txt
+
+ps (Process Status):
+Displays information about running processes.
+Example:
+$ ps aux
+
+top:
+Provides real-time information about system resource usage.
+Example:
+$ top
+
+df (Disk Free):
+Shows disk space usage for mounted filesystems.
+Example:
