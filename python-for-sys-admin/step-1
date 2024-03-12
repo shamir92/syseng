@@ -1,0 +1,41 @@
+# 1. Check Disk Usage
+import shutil
+total, used, free = shutil.disk_usage("/")
+print(f"Total: {total // (2**30)} GiB")
+print(f"Used: {used // (2**30)} GiB")
+print(f"Free: {free // (2**30)} GiB")
+
+# 2. List Running Processes
+import subprocess
+processes = subprocess.run(['ps', 'aux'], stdout=subprocess.PIPE).stdout.decode('utf-8')
+print(processes)
+
+# 3. Monitor System Memory
+import os
+os.system('free -m')
+
+# 4. Update System Packages
+os.system('sudo apt-get update && sudo apt-get upgrade')
+
+# 5. Check System Uptime
+os.system('uptime')
+
+# 6. Manage Services
+os.system('systemctl status apache2')
+
+# 7. Monitor Network Traffic
+os.system('netstat -tulnp')
+
+# 8. Manage User Accounts
+os.system('adduser newuser')
+os.system('deluser olduser')
+
+# 9. Backup Files
+os.system('rsync -a /path/to/source /path/to/destination')
+
+# 10. Schedule Tasks with Cron
+import crontab
+cron = crontab.CronTab(user='username')
+job = cron.new(command='python3 /path/to/script.py')
+job.minute.every(1)
+cron.write()
